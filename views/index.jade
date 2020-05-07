@@ -1,0 +1,41 @@
+include mixins
+doctype
+html( lang="en" )
+    head
+        title Sql Query Checker
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Baking Bootstrap Snippets with Jade' )
+        //- Bootswatch Theme
+        link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+ 
+    body(style="padding-bottom:10rem;")
+        .container
+ 
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
+        .row
+        .col-md-4.col-sm-6.col-xs-12
+        
+        .col-md-4.col-sm-6.col-xs-12
+
+          h3= heading        
+          .panel.panel-default
+          pre
+            .panel-heading #{title}
+          .panel-body
+          form(action='/runSql', method="post")
+                div.input
+                    .jumbotron
+                      p  Input Query
+                      textarea(name="sql_query", cols="40", rows="5")
+                div.actions
+                    input(type="submit", value="Check Query")
+        .col-md-4.col-sm-6.col-xs-12                  
+
+
+
+            
+     
+    
